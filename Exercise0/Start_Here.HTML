@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<h1>Links, Advice, Warnings</h1>
+	</HEAD>
+	<BODY>
+		<h3>
+			Glossary
+		</h3>
+		<ol>
+			<li>
+				"Bean"
+				<ul>
+					<li>
+						A .cfc file with getter and setter methods populated by a service.
+					</li>
+					<li>
+						<a href="https://www.geeksforgeeks.org/javabean-class-java/">
+						ColdFusion is based on Java, so the bean refered to in FW/1 is like a JavaBean
+						</a>
+					</li>
+					<li>
+						Note: a "Bean" is called a domain at Mind Over Data (MOD).
+					</li>
+				</ul>
+			</li>
+			<li>
+				"Gateway"
+				<ul>
+					<li>
+						A .cfm file with cfquery and cfqueryparam tags.
+					</li>
+					<li>
+						cfquery param tags are used to run SQL queries.
+					</li>
+					<li>
+						Note: framework 1 does not provide documentation for writing Gateways.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"Service"
+				<ul>
+					<li>
+						A .cfc file with buisness logic methods for modifying and collecting into beans 
+						data from the gateway.
+					</li>
+				</ul>
+			</li>
+            <li>
+				"Domain"
+				<ul>
+					<li>
+						A .cfc file with the object classes created for the application.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"API"
+				<ul>
+					<li>
+						Stands for Application Programming Interface.
+					</li>
+					<li>
+						APIs allow developers to transfer data from outside the scope of the application.
+					</li>
+					<li>
+						For example, an API can provide results from database query to a remote data source.
+					</li>
+					<li>
+						I use Postman (UI) and cURL (script) to interact with Web APIs.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"Dependency injection"
+				<ul>
+					<li>
+						Allows access variables like "session" or "rc" in a 
+						view or controller 
+						<br /> 
+						without declaring them (DI/1 injects these variables).
+					</li>
+				</ul>
+			</li>
+			<li>
+				"buildURL" 
+				<ul>
+					<li>
+						Urls are structured in Framework 1 to isolate the action accomplished by
+						a page.
+					</li>
+					<li>
+						For example, a page listing products would be /index.cfm?action=product.list
+					</li>
+				</ul>
+			</li>
+			<li>
+				"CTE" 
+				<ul>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL"> 
+							A decent Wikipedia article on CTE 
+						</a> 
+					</li>
+					<li>
+						CTE stands for Common Table Expression.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"SPA" 
+				<ul>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Single-page_application">  
+							A decent Wikipedia article on SPA 
+						</a> 
+					</li>
+					<li>
+						SPA stands for Single Page {web} Application.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"SOAP" 
+				<ul>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/SOAP"> 
+							SOAP (rember, this is HTTP/S using XML)
+						</a>
+					</li>
+					<li>
+						SOAP stands for Simple Object Access Protocol.
+					</li>
+				</ul>
+			</li>
+			<li>
+				"REST" 
+				<ul>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Representational_state_transfer"> 
+							REST (rember, this is HTTP/S using XML, HTML or JSON for CRUD HTTP opperations)
+						</a>
+					</li>
+					<li>
+						REST stands for Representational State Transfer.
+					</li>
+				</ul>
+			</li>	
+		</ol>
+		<h3>
+			Advice
+		</h3>
+		<ol>
+			<li>
+				Debug Framework One Applications (esspecially DI/1 and FW/1).
+				<ul>
+					<li>
+						Use &lsaquo;cfdump var=''&rsaquo; &lsaquo;/cfdump &rsaquo; 
+						and &lsaquo;cfabort&rsaquo; &lsaquo;/cfabort &rsaquo; tags in .cfm files to figure out what values
+						are assigned to each structure in rc or session 
+					</li>
+				</ul>
+			</li>
+			<li>
+				Use libraries and existing code as much as possible.
+				<ul>
+					<li>
+						DataTables, Bootstrap 4, JQuery and even your own code from a prior
+						project can be used to eliminate redundancy.
+					</li>
+				</ul>
+			</li>
+			<li>
+				Don't overlook the webConfig file and Application.cfc as potencial sources of errors.
+				<ul>
+					<li>
+						Make sure that your environmnet is set up correctly.
+					</li>
+					<li>
+						Check your mappings to verify they match all your required file types.	
+					</li>
+					<li>
+						Verify that your url building functions work as expected.
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<h3>
+			Prefered references
+		</h3>
+		<ul>
+			<li>
+				<a href="https://cfdocs.org/">
+					CFDocs 
+				</a>
+				Find correct information on ColdFusion tags and functions.
+			</li>
+			<li>
+				<a href="https://www.datatables.net/">
+					DataTables
+				</a>
+				Streamline the process of creating admin pages and dashboard views.
+			</li>
+			<li>
+				<a href="https://developers.google.com/web/tools/chrome-devtools/">
+					Introduction to Chrome dev tools
+				</a>
+				Fix JavaScript and CSS errors.
+			</li>
+			<li>
+				<a href="https://css-tricks.com/">
+					CSS-tricks
+				</a>
+				<br />
+				Find information about CSS conventions, examples and best practices
+			</li>
+			<li>
+				<a href="https://developer.mozilla.org/en-US/docs/Web">
+					MDN web docs
+				</a>
+				<br />
+				(use instead of W3 schools) for HTML, JavaScript, and CSS information
+			</li>
+			<li>
+				<a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-2017">
+					Microsoft SQL Server documentation  
+				</a>
+				<br />
+				A MS SQL language reference.
+			</li>
+			<li>
+				<a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+					Bootstrap 4
+				</a>
+				<br />
+				Learn about features that streamline the front-end development process.
+			</li>
+			<li>
+				<a href="http://kurtdowswell.com/software-development/git-bash-aliases/">
+					Git Aliases
+				</a>
+				<br />
+				Configure your git Bash shell to use shorter aliases instead of long-winded commands.
+			</li>
+			<li>
+				<a href="http://htmlandcssbook.com/extras/html-escape-codes/">
+					HTML & CSS escape codes
+				</a>
+				<br />
+				Expand your knowlage of responsive and lightweight web design and the functionality of the cfdocument tag.
+			</li>
+			<li>
+				<a href="http://framework-one.github.io/documentation/3.5/#your-first-fw1-application">
+					Start Here for framework-one.
+				</a>
+			</li>
+			<li>
+				<a href="http://framework-one.github.io/documentation/4.0/reference-manual.html#request-scope">
+					Framework 1 docs: mentions how to use rc
+				</a>
+			</li>
+			<li>
+				<a href="http://framework-one.github.io/documentation/4.0/reference-manual.html#fw1-layouts">
+					Framework 1 docs: mentions how to use body in layouts
+				</a>	
+			</li>
+			<li>
+				<a href="http://framework-one.github.io/documentation/4.2/using-di-one.html#terminology">
+					Framework 1 docs: How to use Dependency Injection D/I
+				</a>
+			</li>
+            <li>
+				<a href="https://www.essentialsql.com/introduction-common-table-expressions-ctes/">
+					Common Table Expressions: Introduction and examples.
+				</a>
+			</li>
+		</ul>
+	</BODY>
+</HTML>
